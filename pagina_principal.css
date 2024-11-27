@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-principal: #c7a17a;
+    --background-color: #f9EAD7;
+    --tono-oscuro: #151515;
+    --color-enlace: #ffd8af;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Estilo para el logo junto al nombre de la empresa */
+
+.contenedor-principal {
+    position: fixed;
+    background-color: var(--background-color);
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.contenedor-logo i {
+    font-size: 3rem;
+}
+
+.contenedor-logo h1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+/* Estilo de la barra principal */
+.contenedor-BarraPrincipal {
+    position: fixed;
+    background-color: var(--color-principal);
+    width: 100%;
+    top: 6rem;
+    z-index: 9;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li {
+    list-style: none;
+    top: 10rem;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--tono-oscuro);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+    opacity: 1;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+main {
+    margin-top: 10rem; /* Ajustar espacio para evitar superposición */
+}
+
+header {
+    padding-bottom: 10rem;
+}
+
+/*Ajustar el titulo*/
+
+.titulo-dulces{
+    font-weight: normal;
+    text-align: center;
+    margin: 20px 0;
+    color: var(--tono-oscuro);
+}
+
+/*Editar como se ve el al pasar encima del enlace*/
+
+.row1 a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--tono-oscuro);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative; 
+}
+
+.row1 a::after{
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: var(--color-enlace);
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease
+}
+
+.row1 a:hover::after{
+    opacity: 1;
+}
+
+.row1 a:hover{
+    color: var(--color-principal);
+}
+
+/*las imagenes de la categoria dulce*/
+
+.row1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: start;
+}
+
+.product-box {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.product-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*Apartado para que el tamaño de las imagenes ea el mismo para todas*/
+
+.product-box img {
+    width: 300px; 
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/*Ajuste del tamaño de las imagenes*/
+@media (max-width: 768px) {
+    .row1 {
+        grid-template-columns: repeat(2, 1fr); /*pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .row1 {
+        grid-template-columns: 1fr; /* pantallas pequeñas */
+    }
+}
+
+/*LO SALADOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+
+/*Ajustar el titulo*/
+
+.titulo-salado{
+    font-weight: normal;
+    text-align: center;
+    margin: 10px 0 30px 0;
+    color: var(--tono-oscuro)
+}
+
+/*Editar como se ve el al pasar encima del enlace*/
+
+.row2 a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--tono-oscuro);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.row2 a::after{
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: var(--color-enlace);
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease
+}
+
+.row2 a:hover::after{
+    opacity: 1;
+}
+
+.row2 a:hover{
+    color: var(--color-principal);
+}
+
+/*las imagenes de la categoria dulce*/
+
+.row2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: start;
+}
+
+.product-box {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.product-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*Apartado para que el tamaño de las imagenes ea el mismo para todas*/
+
+.product-box img {
+    width: 300px; 
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/*Ajuste del tamaño de las imagenes*/
+@media (max-width: 768px) {
+    .row2 {
+        grid-template-columns: repeat(2, 1fr); /*pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .row2 {
+        grid-template-columns: 1fr; /* pantallas pequeñas */
+    }
+}
+
+/*NAVIDEÑOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+
+/*Ajustar el titulo*/
+
+.titulo-navidad{
+    font-weight: normal;
+    text-align: center;
+    margin: 10px 0 30px 0;
+    color: var(--tono-oscuro)
+}
+
+/*Editar como se ve el al pasar encima del enlace*/
+
+.row3 a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--tono-oscuro);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.row3 a::after{
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: var(--color-enlace);
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease
+}
+
+.row3 a:hover::after{
+    opacity: 1;
+}
+
+.row3 a:hover{
+    color: var(--color-principal);
+}
+
+/*las imagenes de la categoria dulce*/
+
+.row3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: start;
+}
+
+.product-box {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.product-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*Apartado para que el tamaño de las imagenes ea el mismo para todas*/
+
+.product-box img {
+    width: 300px; 
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/*Ajuste del tamaño de las imagenes*/
+@media (max-width: 768px) {
+    .row3 {
+        grid-template-columns: repeat(2, 1fr); /*pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .row3 {
+        grid-template-columns: 1fr; /* pantallas pequeñas */
+    }
+}
+
+/*BEBIDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAS*/
+
+/*Ajustar el titulo*/
+
+.titulo-bebidas{
+    font-weight: normal;
+    text-align: center;
+    margin: 10px 0 30px 0;
+    color: var(--tono-oscuro)
+}
+
+/*Editar como se ve el al pasar encima del enlace*/
+
+.row4 a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--tono-oscuro);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.row4 a::after{
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: var(--color-enlace);
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease
+}
+
+.row4 a:hover::after{
+    opacity: 1;
+}
+
+.row4 a:hover{
+    color: var(--color-principal);
+}
+
+/*las imagenes de la categoria dulce*/
+
+.row4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: start;
+}
+
+/*SOBRE NOSOTROOOOOOOS*/
+
+.sobre-nosotros{
+    font-weight: normal;
+    text-align: center;
+    margin-top: 80px;
+    color: var(--tono-oscuro)
+}
+
+.row5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.accordion-container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.accordion-item {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-checkbox {
+    display: none;
+}
+
+.accordion-button {
+    display: block;
+    width: 900px;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 15px;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    
+}
+
+.accordion-button:hover {
+    background-color: white;
+    color: var(--color-principal);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 0 15px;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+}
+
+.accordion-checkbox:checked + .accordion-button + .accordion-content {
+    max-height: 200px;
+    padding: 15px;
+}
+
+.vínculo{
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.vínculo:hover{
+    color: var(--color-principal);
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.product-box {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.product-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*Apartado para que el tamaño de las imagenes ea el mismo para todas*/
+
+.product-box img {
+    width: 300px; 
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/*Ajuste del tamaño de las imagenes*/
+@media (max-width: 768px) {
+    .row4 {
+        grid-template-columns: repeat(2, 1fr); /*pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .row4 {
+        grid-template-columns: 1fr; /* pantallas pequeñas */
+    }
+}
